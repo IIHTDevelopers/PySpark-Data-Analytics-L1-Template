@@ -1,7 +1,7 @@
 # Importing Necessary modules
 import pyspark
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import sum, countpip 
+from pyspark.sql.functions import sum, count 
 from pyspark.sql.functions import first, explode
 from pyspark.sql.functions import round, when, dayofweek
 from pyspark.sql.functions import col, to_date
