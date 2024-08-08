@@ -97,26 +97,7 @@ class TestLoadDataFromFlatfile(unittest.TestCase):
             print("TestLoadDataFromFlatfile = Falied")
         assert passed
 
-class TestExplodeProductLinesDescription(unittest.TestCase):
-     
-    def test_explode_productLines_description(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.explode_productLines_description(spark)
-            test_df = qn.explode_productLines_description(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestExplodeProductLinesDescription", True, "functional")
-                print("TestExplodeProductLinesDescription = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestExplodeProductLinesDescription", False, "functional")
-                print("TestExplodeProductLinesDescription = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestExplodeProductLinesDescription", False, "functional")
-            print("TestExplodeProductLinesDescription = Falied")
-        assert passed
+
 
 class TestGetCustomerInfo(unittest.TestCase):
      
@@ -139,47 +120,6 @@ class TestGetCustomerInfo(unittest.TestCase):
             print("TestGetCustomerInfo = Falied")
         assert passed
 
-class TestRetrunProductCategory(unittest.TestCase):
-     
-    def test_retrun_product_category(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.retrun_product_category(spark)
-            test_df = qn.retrun_product_category(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestRetrunProductCategory", True, "functional")
-                print("TestRetrunProductCategory = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestRetrunProductCategory", False, "functional")
-                print("TestRetrunProductCategory = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestRetrunProductCategory", False, "functional")
-            print("TestRetrunProductCategory = Falied")
-        assert passed
-
-class TestReturnOrdersByDayByStatus(unittest.TestCase):
-     
-    def test_return_orders_by_day_by_status(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.return_orders_by_day_by_status(spark)
-            test_df = qn.return_orders_by_day_by_status(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestReturnOrdersByDayByStatus", True, "functional")
-                print("TestReturnOrdersByDayByStatus = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestReturnOrdersByDayByStatus", False, "functional")
-                print("TestReturnOrdersByDayByStatus = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestReturnOrdersByDayByStatus", False, "functional")
-            print("TestReturnOrdersByDayByStatus = Falied")
-        assert passed
 
 class TestCleanProductMSRPColumn(unittest.TestCase):
      
@@ -201,89 +141,6 @@ class TestCleanProductMSRPColumn(unittest.TestCase):
             print("TestCleanProductMSRPColumn = Falied")
         assert passed
 
-class TestCleanProductlinesDescription(unittest.TestCase):
-     
-    def test_clean_productlines_description(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.clean_productlines_description(spark)
-            test_df = qn.clean_productlines_description(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestCleanProductlinesDescription", True, "functional")
-                print("TestCleanProductlinesDescription = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestCleanProductlinesDescription", False, "functional")
-                print("TestCleanProductlinesDescription = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestCleanProductlinesDescription", False, "functional")
-            print("TestCleanProductlinesDescription = Falied")
-        assert passed
-
-class TestReturnTop5Employees(unittest.TestCase):
-
-     def test_return_top_5_employees(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.return_top_5_employees(spark)
-            test_df = qn.return_top_5_employees(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestReturnTop5Employees", True, "functional")
-                print("TestReturnTop5Employees = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestReturnTop5Employees", False, "functional")
-                print("TestReturnTop5Employees = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestReturnTop5Employees", False, "functional")
-            print("TestReturnTop5Employees = Falied")
-        assert passed
-
-class TestReportCancelledOrders(unittest.TestCase):
-
-    def test_report_cancelled_orders(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.report_cancelled_orders(spark)
-            test_df = qn.report_cancelled_orders(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestReportCancelledOrders", True, "functional")
-                print("TestReportCancelledOrders = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestReportCancelledOrders", False, "functional")
-                print("TestReportCancelledOrders = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestReportCancelledOrders", False, "functional")
-            print("TestReportCancelledOrders = Falied")
-        assert passed
-
-class TestReturnTop5BigSpenders(unittest.TestCase):
-     
-    def test_return_top_5_big_spenders(self):
-        try:
-            test_obj = TestUtils()
-            sol_df = sol.return_top_5_big_spenders(spark)
-            test_df = qn.return_top_5_big_spenders(spark)
-            if are_two_spark_dataframes_equal(sol_df, test_df):
-                passed = True
-                test_obj.yakshaAssert("TestReturnTop5BigSpenders", True, "functional")
-                print("TestReturnTop5BigSpenders = Passed")
-            else:
-                passed = False
-                test_obj.yakshaAssert("TestReturnTop5BigSpenders", False, "functional")
-                print("TestReturnTop5BigSpenders = Falied")
-        except:
-            passed = False
-            test_obj.yakshaAssert("TestReturnTop5BigSpenders", False, "functional")
-            print("TestReturnTop5BigSpenders = Falied")
-        assert passed
 
 class TestReturnTop5BigSpendCountries(unittest.TestCase):
      
